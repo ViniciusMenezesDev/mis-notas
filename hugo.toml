@@ -1,0 +1,64 @@
+baseURL = "https://example.com"
+locale = "pt-br"
+title = "Mis Notas"
+disableKinds = ["taxonomy", "term"]
+
+[module]
+  [[module.imports]]
+    path = "github.com/maxfettinger/fieldnotes"
+
+[pagination]
+  pagerSize = 10
+
+[markup.highlight]
+  noClasses = false
+[markup.goldmark.parser]
+  wrapStandAloneImageWithinParagraph = false
+[markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['\[', '\]'], ['$$', '$$']]
+    inline = [['\(', '\)']]
+
+[menus]
+  [[menus.main]]
+    name = "Lecciones"
+    pageRef = "/lecciones"
+    weight = 10
+  [[menus.main]]
+    name = "Sobre"
+    pageRef = "/about"
+    weight = 20
+
+[params]
+  description = "Meu caderno de anotações enquanto aprendo Espanhol."
+  mainSections = ["lecciones"]
+  math = false
+
+  socialIcons = [
+    { name = "github", url = "https://github.com/viniciusmenezesdev" },
+  ]
+
+  [params.author]
+    name = "Vinícius Menezes"
+    jobTitle = "Estudante de Espanhol"
+
+  [params.style]
+    preset = "fieldnotes"
+    scheme = ""
+
+  [params.mode]
+    default = "auto"
+    toggle = true
+
+  [params.fonts]
+    body = ""
+    heading = ""
+    mono = ""
+
+  [params.background]
+    light = "grid"
+    dark = "grid"
+
+  [params.colors.light]
+  [params.colors.dark]
