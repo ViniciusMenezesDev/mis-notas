@@ -1,4 +1,4 @@
-baseURL = "https://viniciusmenezesdev.github.io/mis-notas/"
+baseURL = "https://viniciusmenezes.dev/mis-notas/"
 locale = "pt-br"
 title = "Mis Notas"
 disableKinds = ["taxonomy", "term"]
